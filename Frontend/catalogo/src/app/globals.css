@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Exo:wght@300;600&family=Montserrat&family=Titillium+Web&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --green: #00B031;
+  --gray: #1F1F1F;
+  --black: #111;
+}
+
+body {
+  background: var(--gray);
+}
+
+header,footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  height: 5em;
+  background: var(--black);
+}
+
+header img{
+  cursor: pointer;
+}
+
+footer{
+  height: 6.25em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: white;
+  background: linear-gradient(180deg, rgba(31, 31, 31, 0.26) 0%, var(--green) 100%);
+}
