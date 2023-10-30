@@ -11,6 +11,12 @@
   --black: #111;
 }
 
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 body {
   background: var(--gray);
 }
@@ -31,6 +37,18 @@ header img{
   cursor: pointer;
 }
 
+header div{
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer{
   height: 6.25em;
   position: absolute;
@@ -43,3 +61,4 @@ footer{
   color: white;
   background: linear-gradient(180deg, rgba(31, 31, 31, 0.26) 0%, var(--green) 100%);
 }
+

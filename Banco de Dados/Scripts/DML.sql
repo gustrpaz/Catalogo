@@ -19,3 +19,5 @@ INNER JOIN Genero
 ON Filme.IdGenero = Genero.IdGenero
 GO
 
+SELECT * FROM Filme
+
