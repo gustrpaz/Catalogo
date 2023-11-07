@@ -62,9 +62,16 @@ namespace Catalogo_webAPI.Repositories
         public void Deletar(int IdGenero)
         {
             Genero generoBuscado = BuscarPorId(IdGenero);
-            // Remove o gênero que foi buscado
+
+            // Verifica se existem filmes associados a este gênero
+            if (ctx.Filmes.Any(filme => filme.IdGenero == IdGenero))
+            {
+                // Se houver filmes associados, não permita a exclusão do gênero
+                throw new Exception("Não é possível excluir este gênero, pois existem filmes associados a ele.");
+            }
+
+            // Caso não existam filmes associados, pode prosseguir com a exclusão do gênero
             ctx.Generos.Remove(generoBuscado);
-            // Salva as informações que serão gravadas no Banco de Dados
             ctx.SaveChanges();
         }
 

@@ -1,7 +1,9 @@
-import type { Metadata } from 'next'
 import './globals.css'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Logo from '../assets/Logo.svg'
+
+const titilliumWeb = 'Titillium Web, sans-serif';
 
 export const metadata: Metadata = {
   title: 'Catálogo',
@@ -13,14 +15,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <html lang="br">
+      <body style={{ fontFamily: titilliumWeb }}>
       <header>
         <div className='wrapper'>
           <Image src={Logo} width={160} height={53} alt='Logo'></Image>
         </div>
-      </header>
-      <main className='wrapper'>{children}</main>
-      <footer>© Todos os Diretos Reservados - Gustavo e Lívia</footer>
-    </>
+      </header>{children}<footer>© Todos os Diretos Reservados - Gustavo e Lívia</footer>
+      </body>
+    </html>
   )
 }

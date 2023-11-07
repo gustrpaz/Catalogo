@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Exo:wght@300;600&family=Montserrat&family=Titillium+Web&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,33 +12,36 @@
   --black: #111;
 }
 
-.wrapper{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 body {
   background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header,footer {
+header, footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-header{
+header {
   height: 5em;
   background: var(--black);
 }
 
-header img{
+header img {
   cursor: pointer;
 }
 
-header div{
+header div {
   width: 100%;
   text-align: center;
 }
@@ -47,11 +51,13 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 
-footer{
-  height: 6.25em;
-  position: absolute;
+footer {
+  height: 6em;
+  align-items: flex-end;
+  padding-bottom: 1rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -61,4 +67,3 @@ footer{
   color: white;
   background: linear-gradient(180deg, rgba(31, 31, 31, 0.26) 0%, var(--green) 100%);
 }
-

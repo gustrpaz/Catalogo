@@ -182,7 +182,6 @@ D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalog
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.csproj.CoreCompileInputs.cache
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.MvcApplicationPartsAssemblyInfo.cache
-D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.sourcelink.json
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\staticwebassets.build.json
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\staticwebassets.development.json
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\staticwebassets\msbuild.Catalogo_webAPI.Microsoft.AspNetCore.StaticWebAssets.props

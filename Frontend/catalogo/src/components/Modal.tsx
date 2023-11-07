@@ -1,36 +1,87 @@
-import { ReactNode } from 'react';
-import './Modal.css'
-
+import './Modal.css';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import closeIcon from '../assets/xmark-solid.svg'
+import { Genre } from "../app/page";
+import { title } from 'process';
+import { text } from 'stream/consumers';
 interface ModalProps {
+  title: string;
   isOpen: boolean;
-  onClose: () => void;
-  children: ReactNode
+  onClose: (idFilme?: number) => void;
+  action: (idGenero?: number) => void;
+  text: string;
+  genres?: Genre[];
+  children: React.ReactNode;
 }
-
-export function Modal({ isOpen, onClose, children }: ModalProps) {
-  if (!isOpen) return null;
-
-  return (
-    <div className='modal'>
-      <div className='modal-bg' onClick={onClose}></div>
-      <div className='modal-content'>
-        <div className='modal-title'>
-          <div className='modal-box'>
-            <h2>Título</h2>
-            <h4>Subtítulo</h4></div>
+export const Modal_Filme: React.FC<ModalProps> = ({ title, isOpen, onClose, action, text, children, genres }) => {
+  const [nomeFilme, setNomeFilme] = useState('');
+  const [generoSelecionado, setGeneroSelecionado] = useState('');
+  return isOpen ? (
+    <div className={'modal'}>
+      <div className={'modal__overlay'} />
+      <div className={'modal__box'}>
+        <div className='close-icon'>
+          <button className={'modal__close-btn'} onClick={() => onClose()}>
+            <Image src={closeIcon} alt={'close modal'} width={30} height={30} />
+          </button>
         </div>
-
-        <button
-          type='button'
-          className='btn-modal'
-          onClick={onClose}
-        >X</button>
-        <div className=''>{children}</div>
+        <div className='modal__container'>
+          <div className={'modal_content'}>
+            <label>{title}</label>
+            <input
+              className='input imodal'
+              type="text"
+              placeholder="Ex: Avatar"
+              value={nomeFilme}
+              onChange={(e) => setNomeFilme(e.target.value)}
+            />
+            <select
+              name="genero"
+              id="genero"
+              value={generoSelecionado}
+              onChange={(e) => setGeneroSelecionado(e.target.value)}
+            >
+              <option value="" selected>Selecionar Gênero</option>
+              {genres &&
+                genres.map((genre) => (
+                  <option key={genre.idGenero} value={genre.idGenero}>
+                    {genre.nomeGenero}
+                  </option>
+                ))
+              }
+            </select>
+            <button className="button-modal" onClick={() => action(generoSelecionado, nomeFilme)}>{text}</button>
+          </div>
+        </div>
       </div>
     </div>
-  );
+  ) : null;
 }
-
-
-
-
+export const Modal_Genero: React.FC<ModalProps> = ({ title, isOpen, onClose, action, text, children }) => {
+  const [nomeGenero, setNomeGenero] = useState('');
+  return isOpen ? (
+    <div className={'modal'}>
+      <div className={'modal__overlay'} />
+      <div className={'modal__box'}>
+        <div className='close-icon'>
+          <button className={'modal__close-btn'} onClick={() => onClose()}>
+            <Image src={closeIcon} alt={'close modal'} width={30} height={30} />
+          </button>
+        </div>
+        <div className='modal__container'>
+          <div className={'modal_content'}>
+            <label>{title}</label>
+            <input
+              className='input imodal'
+              type="text"
+              placeholder="Ex: Romance"
+              value={nomeGenero}
+              onChange={(e) => setNomeGenero(e.target.value)} />
+            <button className="button-modal" onClick={() => action(nomeGenero)}>{text}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  ) : null;
+}

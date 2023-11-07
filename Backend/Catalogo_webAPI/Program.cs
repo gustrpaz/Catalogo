@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.UseKestrel();
+builder.WebHost.UseUrls("http://localhost:5000");
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
@@ -57,9 +58,9 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-app.UseRouting();
-
 app.UseCors("CorsPolicy");
+
+app.UseRouting();
 
 app.Run();
 
