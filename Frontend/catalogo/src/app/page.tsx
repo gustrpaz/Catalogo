@@ -8,7 +8,7 @@ import { api } from '@/lib/api';
 import { Modal_Filme, Modal_Genero } from '@/components/Modal';
 interface Movie {
   idFilme: number,
-  idGenero: string,
+  idGenero: number,
   nomeFilme: string
 }
 export interface Genre {
