@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import closeIcon from '../assets/xmark-solid.svg'
 import { Genre } from "../app/page";
-import { title } from 'process';
-import { text } from 'stream/consumers';
 interface ModalProps {
   title: string;
   isOpen: boolean;
