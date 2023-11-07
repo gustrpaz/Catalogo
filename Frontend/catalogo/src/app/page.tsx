@@ -125,8 +125,8 @@ export default function Home() {
       };
       await api.put(`/Generos/${idGenero}`, updatedGenre);
       console.log('Gênero atualizado com sucesso');
-      toggleModal4(); // Fecha o modal após a atualização
-      getGenres(); // Atualiza a lista de gêneros
+      toggleModal4(); 
+      getGenres(); 
     } catch (error) {
       console.error('Erro ao fazer a requisição:', error);
     }
@@ -150,7 +150,7 @@ export default function Home() {
             type='text'
             placeholder='Ex: Avatar'
             value={searchMovie}
-            onChange={(e) => setSearchMovie(e.target.value)} // Atualiza o estado da pesquisa
+            onChange={(e) => setSearchMovie(e.target.value)} 
           />
           <table className='table table-one'>
             <thead>
@@ -220,7 +220,7 @@ export default function Home() {
                       <button className='btn'
                         onClick={() => {
                           setSelectedGenreId(genre.idGenero);
-                          toggleModal3(genre.idGenero)
+                          toggleModal4(genre.idGenero)
                         }}>
                         <Image src={Edit} width={22} height={22} alt='Editar' />
                       </button>

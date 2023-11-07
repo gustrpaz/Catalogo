@@ -67,3 +67,33 @@ footer {
   color: white;
   background: linear-gradient(180deg, rgba(31, 31, 31, 0.26) 0%, var(--green) 100%);
 }
+
+@media(max-width:1260px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media(max-width:1024px) {
+  .wrapper {
+    max-width: 800px;
+  }
+}
+
+@media(max-width:768px) {
+  .wrapper {
+    max-width: 500px;
+  }
+}
+
+@media(max-width:480px) {
+  .wrapper {
+    max-width: 400px;
+  }
+}
+
+@media(max-width:320px) {
+  .wrapper {
+    max-width: 300px;
+  }
+}

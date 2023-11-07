@@ -196,3 +196,4 @@ D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\refint\
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.pdb
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.genruntimeconfig.cache
 D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\ref\Catalogo_webAPI.dll
+D:\Senai\Meus Projetos\Catalogo\Backend\Catalogo_webAPI\obj\Debug\net7.0\Catalogo_webAPI.sourcelink.json
